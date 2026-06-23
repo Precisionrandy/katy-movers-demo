@@ -19,7 +19,7 @@ const path = require("path");
 const crypto = require("crypto");
 
 const PORT = process.env.PORT || 8080;
-const PUBLIC_DIR = path.join(__dirname, "public");
+const PUBLIC_DIR = path.join(__dirname);
 
 // ── Startup diagnostics ──────────────────────────────────────────
 // These logs appear in Render's "Logs" tab and make it obvious whether
