@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katy Movers — Moving Your Memories</title>
+<meta name="description" content="Trusted Katy, TX movers since 1996. Get an instant AI-powered quote, 24/7 — no waiting for a callback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/@tabler/icons-webfont/3.31.0/tabler-icons.min.css">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="demo-ribbon" id="demoRibbon">
+  <i class="ti ti-flask"></i>
+  <span><strong>Live demo</strong> built for Katy Movers by Precision Partners — this is what your site could look like, powered by a real AI intake system.</span>
+  <button class="demo-ribbon__close" id="closeRibbon" aria-label="Dismiss">
+    <i class="ti ti-x"></i>
+  </button>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">KM</span>
+      <span class="brand-text">
+        <strong>Katy Movers</strong>
+        <small>Moving Your Memories</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#quote">Get a quote</a>
+    </nav>
+    <a href="tel:2813913536" class="header-phone">
+      <i class="ti ti-phone" aria-hidden="true"></i>
+      <span>281-391-3536</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Katy, Texas &middot; Serving the Houston area since 1996</p>
+        <h1>Your memories deserve<br><em>careful hands.</em></h1>
+        <p class="hero-sub">Three decades of moving families and businesses across Katy and Houston — now backed by an AI assistant that answers instantly, day or night, so your move never waits on a callback.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-primary">
+            <i class="ti ti-sparkles" aria-hidden="true"></i>
+            Get an instant AI quote
+          </a>
+          <a href="tel:2813913536" class="btn btn-ghost">
+            <i class="ti ti-phone" aria-hidden="true"></i>
+            Call now
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <i class="ti ti-award" aria-hidden="true"></i>
+            <span>2023 Neighborhood Faves winner</span>
+          </div>
+          <div class="trust-item">
+            <i class="ti ti-shield-check" aria-hidden="true"></i>
+            <span>Licensed &amp; insured &middot; TxDMV 005644137C</span>
+          </div>
+          <div class="trust-item">
+            <i class="ti ti-clock" aria-hidden="true"></i>
+            <span>AI answers in &lt; 10 seconds, 24/7</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-widget" id="quote">
+        <div class="ai-card">
+          <div class="ai-card__header">
+            <div class="ai-avatar">
+              <i class="ti ti-truck" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="ai-card__title">Ask Katy &mdash; AI Moving Assistant</p>
+              <p class="ai-card__status"><span class="status-dot"></span> Online now &middot; replies instantly</p>
+            </div>
+          </div>
+
+          <div class="ai-chat" id="aiChat">
+            <div class="ai-msg ai-msg--bot">
+              <p>Hi! I'm Katy Movers' AI assistant. I can get you a real quote estimate right now — no waiting for a callback. Want to start?</p>
+            </div>
+          </div>
+
+          <form id="quoteForm" class="ai-form">
+            <div class="ai-form__step" data-step="intro">
+              <button type="button" class="btn btn-primary btn-block" id="startQuoteBtn">
+                <i class="ti ti-message-circle" aria-hidden="true"></i>
+                Start my free quote
+              </button>
+            </div>
+
+            <div class="ai-form__step" data-step="form" hidden>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="firstName">First name</label>
+                  <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="Sarah">
+                </div>
+                <div class="form-field">
+                  <label for="lastName">Last name</label>
+                  <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Mitchell">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="phone">Phone number</label>
+                  <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(281) 555-0142">
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="sarah@email.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="moveDate">Estimated move date</label>
+                  <input type="date" id="moveDate" name="moveDate" required>
+                </div>
+                <div class="form-field">
+                  <label for="homeSize">Home size</label>
+                  <select id="homeSize" name="homeSize" required>
+                    <option value="">Choose one</option>
+                    <option value="Studio">Studio</option>
+                    <option value="1BR">1 bedroom</option>
+                    <option value="2BR">2 bedroom</option>
+                    <option value="3BR">3 bedroom</option>
+                    <option value="4BR+">4+ bedroom</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="originZip">Moving from (zip)</label>
+                  <input type="text" id="originZip" name="originZip" required inputmode="numeric" placeholder="77494">
+                </div>
+                <div class="form-field">
+                  <label for="destZip">Moving to (zip)</label>
+                  <input type="text" id="destZip" name="destZip" required inputmode="numeric" placeholder="77019">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label>Any special items?</label>
+                <div class="checkbox-row">
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="specialItems" value="Piano">
+                    <span><i class="ti ti-piano" aria-hidden="true"></i> Piano</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="specialItems" value="Gun safe">
+                    <span><i class="ti ti-shield-lock" aria-hidden="true"></i> Gun safe</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="specialItems" value="Pool table">
+                    <span><i class="ti ti-disc" aria-hidden="true"></i> Pool table</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="specialItems" value="Fine art / antiques">
+                    <span><i class="ti ti-frame" aria-hidden="true"></i> Fine art</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="howHeard">How did you hear about us?</label>
+                <select id="howHeard" name="howHeard">
+                  <option value="">Choose one</option>
+                  <option value="Google Search">Google search</option>
+                  <option value="Referral">Friend / family referral</option>
+                  <option value="Facebook">Facebook / Instagram</option>
+                  <option value="Yelp">Yelp</option>
+                  <option value="Drove past office">Drove past our office</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitQuoteBtn">
+                <i class="ti ti-sparkles" aria-hidden="true"></i>
+                Get my instant estimate
+              </button>
+              <p class="form-disclaimer">By submitting, you agree to receive a text/call about your move. This call may be recorded for quality and training. No spam, ever.</p>
+            </div>
+
+            <div class="ai-form__step" data-step="result" hidden>
+              <div class="result-card" id="resultCard"></div>
+              <button type="button" class="btn btn-ghost btn-block" id="resetQuoteBtn">
+                <i class="ti ti-refresh" aria-hidden="true"></i>
+                Start a new quote
+              </button>
+            </div>
+          </form>
+        </div>
+        <p class="widget-caption">
+          <i class="ti ti-bolt" aria-hidden="true"></i>
+          This box is a real, working AI intake system &mdash; not a mockup. Every submission is scored, logged, and routed exactly like a live phone call.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="container logos-inner">
+      <p>30 years &middot; 3 generations of Katy families trust us</p>
+      <div class="logo-row">
+        <span><i class="ti ti-license" aria-hidden="true"></i> TxDMV Licensed</span>
+        <span><i class="ti ti-shield-check" aria-hidden="true"></i> Fully Insured</span>
+        <span><i class="ti ti-star" aria-hidden="true"></i> 2023 Neighborhood Faves</span>
+        <span><i class="ti ti-calendar" aria-hidden="true"></i> Est. 1996</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <p class="eyebrow center">What we move</p>
+      <h2 class="section-title center">Built for every kind of move</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="ti ti-home" aria-hidden="true"></i></div>
+          <h3>Residential moving</h3>
+          <p>Apartments, condos, townhomes, and single-family homes &mdash; full-service packing and unpacking available.</p>
+        </div>
+        <div class="service-card service-card--featured">
+          <div class="service-icon"><i class="ti ti-piano" aria-hidden="true"></i></div>
+          <h3>Piano moving</h3>
+          <p>Our specialty for 30 years. Baby grand, upright, organ &mdash; handled with dedicated equipment and trained crews.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="ti ti-building" aria-hidden="true"></i></div>
+          <h3>Commercial moving</h3>
+          <p>Office relocations with minimal downtime &mdash; furniture, equipment, and files moved and reinstalled.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="ti ti-box" aria-hidden="true"></i></div>
+          <h3>Packing services</h3>
+          <p>Full packing, partial packing, or just the supplies &mdash; your call. We protect what matters most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="how-it-works">
+    <div class="container">
+      <p class="eyebrow center">How the AI assistant works</p>
+      <h2 class="section-title center">Quoted in minutes. Never on hold.</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Ask anytime</h3>
+          <p>Call, text, or use the quote box above &mdash; 24 hours a day. The AI greets you by name and gets straight to it.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>It gathers the details</h3>
+          <p>Move date, home size, origin and destination, special items like pianos or safes &mdash; structured, not scribbled on a sticky note.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>You get a real estimate</h3>
+          <p>An instant price range based on your actual details, plus a confirmation text so nothing gets lost.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>A real person follows up</h3>
+          <p>Our team reviews every quote and calls to confirm crew size, truck, and your exact moving day plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <div class="container">
+      <p class="eyebrow center">Kind words</p>
+      <h2 class="section-title center">What Katy families say</h2>
+      <div class="testimonial-grid">
+        <blockquote class="testimonial">
+          <p>"This is the 2nd time you've moved my wife and I &mdash; you and your team are batting 2 for 2. The entire crew was amazing."</p>
+          <footer>&mdash; Longtime customer, Katy TX</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"My husband retired from the Navy 4 years ago and we've been through more moves than I can count. Your guys were the best we've had."</p>
+          <footer>&mdash; Military family, relocated to Katy</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"The movers went above and beyond. Very professional and did an expert job. I really appreciate everyone at Katy Movers."</p>
+          <footer>&mdash; Linda S.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div>
+        <h2>Moving soon? Don't leave it to voicemail.</h2>
+        <p>Get a real quote in the next 60 seconds &mdash; any hour, any day.</p>
+      </div>
+      <a href="#quote" class="btn btn-primary btn-lg">
+        <i class="ti ti-sparkles" aria-hidden="true"></i>
+        Get my instant quote
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">KM</span>
+        <span class="brand-text">
+          <strong>Katy Movers</strong>
+          <small>Moving Your Memories</small>
+        </span>
+      </div>
+      <p class="footer-tag">TxDMV No. 005644137C &middot; US DOT No. 1949071</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Contact</p>
+      <a href="tel:2813913536"><i class="ti ti-phone" aria-hidden="true"></i> 281-391-3536</a>
+      <span><i class="ti ti-map-pin" aria-hidden="true"></i> Katy, TX</span>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">This demo</p>
+      <span>Built by Precision Partners</span>
+      <a href="#" id="howBuiltLink"><i class="ti ti-code" aria-hidden="true"></i> How this was built</a>
+    </div>
+  </div>
+</footer>
+
+<div class="info-modal" id="infoModal" hidden>
+  <div class="info-modal__backdrop" id="infoModalBackdrop"></div>
+  <div class="info-modal__card">
+    <button class="info-modal__close" id="infoModalClose" aria-label="Close"><i class="ti ti-x"></i></button>
+    <h3>What just happened when you submitted that quote</h3>
+    <ol>
+      <li><strong>Your form data</strong> was sent to a real backend API (<code>/api/quote</code>) &mdash; the same shape of payload a production system would send from a live AI phone call.</li>
+      <li><strong>The server scored the lead</strong> using the same logic that would run after a real VAPI call: move size, distance, special items, and timing all factor into the estimate.</li>
+      <li><strong>A structured record was created</strong> &mdash; in production this becomes a contact card in the Precision Partners dashboard, exactly like the ones you've seen for Matthew's HVAC Co.</li>
+      <li><strong>In the real version</strong>, this same flow happens automatically on every phone call: Twilio receives the call, VAPI runs the conversation, N8N orchestrates the follow-up, and Supabase stores everything.</li>
+    </ol>
+    <p class="info-modal__note">This page is a working demo of the intake and scoring logic &mdash; built to show Katy Movers exactly what their site could do today.</p>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
