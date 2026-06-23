@@ -21,6 +21,23 @@ const crypto = require("crypto");
 const PORT = process.env.PORT || 8080;
 const PUBLIC_DIR = path.join(__dirname, "public");
 
+// ── Startup diagnostics ──────────────────────────────────────────
+// These logs appear in Render's "Logs" tab and make it obvious whether
+// the public/ folder shipped with the deploy and where it actually is.
+console.log("[startup] __dirname:", __dirname);
+console.log("[startup] PUBLIC_DIR:", PUBLIC_DIR);
+try {
+  const exists = fs.existsSync(PUBLIC_DIR);
+  console.log("[startup] public/ exists:", exists);
+  if (exists) {
+    console.log("[startup] public/ contents:", fs.readdirSync(PUBLIC_DIR).join(", "));
+  } else {
+    console.log("[startup] files next to server.js:", fs.readdirSync(__dirname).join(", "));
+  }
+} catch (e) {
+  console.log("[startup] could not read directory:", e.message);
+}
+
 // ── In-memory "database" ─────────────────────────────────────────
 // Stand-in for Supabase. Same record shape as a production `leads` table.
 const leads = [];
@@ -226,20 +243,24 @@ function serveStatic(req, res) {
   let urlPath = req.url.split("?")[0];
   if (urlPath === "/") urlPath = "/index.html";
 
-  const filePath = path.join(PUBLIC_DIR, urlPath);
+  // Normalize and resolve to an absolute path, then verify it stays inside
+  // PUBLIC_DIR. Using path.resolve on both sides is more robust across
+  // operating systems and hosting environments than a raw startsWith.
+  const requested = path.normalize(path.join(PUBLIC_DIR, urlPath));
+  const publicRoot = path.resolve(PUBLIC_DIR);
 
-  // Basic path traversal guard
-  if (!filePath.startsWith(PUBLIC_DIR)) {
-    res.writeHead(403);
+  if (!path.resolve(requested).startsWith(publicRoot)) {
+    res.writeHead(403, { "Content-Type": "text/plain" });
     return res.end("Forbidden");
   }
 
-  fs.readFile(filePath, (err, data) => {
+  fs.readFile(requested, (err, data) => {
     if (err) {
+      console.log("[404] could not serve:", requested, "-", err.code);
       res.writeHead(404, { "Content-Type": "text/plain" });
       return res.end("Not found");
     }
-    const ext = path.extname(filePath);
+    const ext = path.extname(requested);
     res.writeHead(200, { "Content-Type": MIME_TYPES[ext] || "application/octet-stream" });
     res.end(data);
   });

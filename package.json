@@ -1,0 +1,14 @@
+{
+  "name": "katy-movers-demo",
+  "version": "1.0.0",
+  "description": "Precision Partners demo site for Katy Movers — AI-powered quote intake with a working backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
