@@ -1,0 +1,14 @@
+<svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Katy Movers, Inc. - Moving Your Memories">
+  <defs>
+    <linearGradient id="swoosh" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b3a73"/>
+      <stop offset="100%" stop-color="#2b5cb0"/>
+    </linearGradient>
+  </defs>
+  <text x="2" y="26" font-family="Archivo, Arial Narrow, sans-serif" font-weight="700" font-size="20" fill="#1b3a73" letter-spacing="0.5">Katy</text>
+  <text x="0" y="56" font-family="Archivo, Arial Narrow, sans-serif" font-weight="800" font-size="34" fill="#c8202e" letter-spacing="-0.5">MOVERS</text>
+  <text x="158" y="54" font-family="Archivo, Arial, sans-serif" font-weight="700" font-size="9" fill="#1b3a73">INC.</text>
+  <path d="M 8 62 Q 90 74 180 60 Q 230 51 250 30" stroke="url(#swoosh)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M 244 24 L 256 28 L 248 36 Z" fill="#1b3a73"/>
+  <text x="20" y="74" font-family="Archivo, Arial, sans-serif" font-style="italic" font-weight="600" font-size="9" fill="#1b3a73" letter-spacing="0.3">"Moving Your Memories"</text>
+</svg>

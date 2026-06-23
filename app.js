@@ -10,6 +10,22 @@
     });
   }
 
+  // ── Mobile nav toggle ──
+  var mobileToggle = document.getElementById("mobileToggle");
+  var mobileNav = document.getElementById("mobileNav");
+  if (mobileToggle && mobileNav) {
+    mobileToggle.addEventListener("click", function () {
+      var isOpen = mobileNav.classList.toggle("open");
+      mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileNav.classList.remove("open");
+        mobileToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
   // ── Step navigation ──
   var steps = {
     intro: document.querySelector('[data-step="intro"]'),
