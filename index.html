@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Katy Movers, Inc. — Moving Your Memories | Family-Owned Houston Movers Since 1996</title>
-<meta name="description" content="Family-owned, TxDMV-licensed Katy &amp; Houston movers since 1996. Residential, piano, and commercial moving. Get an instant AI quote 24/7 — no waiting for a callback.">
+<meta name="description" content="Family-owned, TxDMV-licensed Katy &amp; Houston movers since 1996. Residential, piano, and commercial moving. Get a fast quote in 60 seconds — no waiting for a callback.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <div class="demo-ribbon" id="demoRibbon">
   <i class="ti ti-flask-2" aria-hidden="true"></i>
-  <span><strong>Live demo</strong> built for Katy Movers by Precision Partners — a modern rebuild with a working AI quote system. Your logo &amp; real content, redesigned.</span>
+  <span><strong>Live demo</strong> built for Katy Movers by Precision Partners — a modern rebuild with a working instant-quote system. Your logo &amp; real content, redesigned.</span>
   <button class="demo-ribbon__close" id="closeRibbon" aria-label="Dismiss notice"><i class="ti ti-x" aria-hidden="true"></i></button>
 </div>
 
@@ -35,7 +35,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#difference">Why us</a>
-      <a href="#testimonials">Testimonials</a>
+      <a href="#reviews">Reviews</a>
       <a href="#quote" class="nav-cta">Free quote</a>
     </nav>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
@@ -46,7 +46,7 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#difference">Why us</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="#reviews">Reviews</a>
     <a href="#quote">Free quote</a>
     <a href="tel:2813913536" class="mobile-call"><i class="ti ti-phone" aria-hidden="true"></i> 281-391-3536</a>
   </nav>
@@ -57,12 +57,12 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-flag" aria-hidden="true"></span> Family owned &amp; operated in Katy, TX since 1996</p>
+        <p class="eyebrow">Family owned &amp; operated in Katy, TX since 1996</p>
         <h1>Moving your<br><span class="hl-red">memories</span> with care.</h1>
-        <p class="hero-sub">Nearly 30 years moving Houston-area families and businesses. Residential, piano, and commercial moves handled by a team that treats your belongings like our own — now with an AI assistant that quotes you instantly, any hour.</p>
+        <p class="hero-sub">Nearly 30 years moving Houston-area families and businesses. Residential, piano, and commercial moves handled by a team that treats your belongings like our own — with a fast, no-pressure quote in under a minute.</p>
         <div class="hero-actions">
           <a href="#quote" class="btn btn-red">
-            <i class="ti ti-sparkles" aria-hidden="true"></i> Get an instant quote
+            <i class="ti ti-bolt" aria-hidden="true"></i> Get a fast quote
           </a>
           <a href="tel:2813913536" class="btn btn-outline">
             <i class="ti ti-phone" aria-hidden="true"></i> 281-391-3536
@@ -80,17 +80,20 @@
           <div class="ai-card__header">
             <div class="ai-avatar"><i class="ti ti-truck-delivery" aria-hidden="true"></i></div>
             <div>
-              <p class="ai-card__title">Ask Katy — instant quote</p>
-              <p class="ai-card__status"><span class="status-dot" aria-hidden="true"></span> Online now · replies in seconds</p>
+              <p class="ai-card__title">Your free quote in 60 seconds</p>
+              <p class="ai-card__status"><span class="status-dot" aria-hidden="true"></span> We reply fast · no waiting on a callback</p>
             </div>
           </div>
           <div class="ai-chat" id="aiChat">
-            <div class="ai-msg ai-msg--bot"><p>Hi! I'm Katy Movers' assistant. I'll get you a real estimate right now — no waiting on a callback. Ready?</p></div>
+            <div class="ai-msg ai-msg--bot"><p>Hi! Let's get you a real estimate right now — it only takes about a minute. Ready to start?</p></div>
           </div>
           <form id="quoteForm" class="ai-form" novalidate>
             <div class="ai-form__step" data-step="intro">
               <button type="button" class="btn btn-red btn-block" id="startQuoteBtn">
                 <i class="ti ti-message-2" aria-hidden="true"></i> Start my free quote
+              </button>
+              <button type="button" class="btn btn-outline btn-block btn-chat-launch" id="openChatBtn" style="margin-top:10px;">
+                <i class="ti ti-help-circle" aria-hidden="true"></i> Have a question first? Chat with us
               </button>
             </div>
             <div class="ai-form__step" data-step="form" hidden>
@@ -123,7 +126,7 @@
                 <label for="howHeard">How did you hear about us?</label>
                 <select id="howHeard" name="howHeard"><option value="">Choose</option><option value="Google Search">Google search</option><option value="Referral">Friend / family referral</option><option value="Nextdoor">Nextdoor</option><option value="Facebook">Facebook / Instagram</option><option value="Repeat customer">I'm a repeat customer</option><option value="Other">Other</option></select>
               </div>
-              <button type="submit" class="btn btn-red btn-block" id="submitQuoteBtn"><i class="ti ti-sparkles" aria-hidden="true"></i> Get my instant estimate</button>
+              <button type="submit" class="btn btn-red btn-block" id="submitQuoteBtn"><i class="ti ti-bolt" aria-hidden="true"></i> Get my fast estimate</button>
               <p class="form-disclaimer">By submitting, you agree to receive a text or call about your move. This call may be recorded for quality. No spam, ever.</p>
             </div>
             <div class="ai-form__step" data-step="result" hidden>
@@ -132,7 +135,7 @@
             </div>
           </form>
         </div>
-        <p class="widget-caption"><i class="ti ti-bolt" aria-hidden="true"></i> Real working AI intake — every quote is calculated, logged &amp; routed like a live call.</p>
+        <p class="widget-caption"><i class="ti ti-bolt" aria-hidden="true"></i> Every quote is calculated instantly and routed to our team — we follow up fast.</p>
       </div>
     </div>
   </section>
@@ -149,7 +152,7 @@
   <section class="section" id="about">
     <div class="container about-grid">
       <div class="about-copy">
-        <p class="eyebrow"><span class="eyebrow-flag" aria-hidden="true"></span> About Katy Movers, Inc.</p>
+        <p class="eyebrow">About Katy Movers, Inc.</p>
         <h2 class="section-title">Family owned and operated</h2>
         <p>Katy Movers, Inc. is a full-service professional Houston-area moving company that is family owned and operated. We're located in Katy and proud to serve the greater Houston community. We know moving can be stressful — that's why our mission is to make your move as worry-free as possible.</p>
         <p>We understand that with every move our reputation is on the line. With our team of experienced, highly competent movers and packers, we move your belongings with the utmost care. Our frequent repeat customers are a testimony to how hard we work for our clients.</p>
@@ -172,27 +175,27 @@
 
   <section class="section section--tint" id="services">
     <div class="container">
-      <p class="eyebrow center"><span class="eyebrow-flag" aria-hidden="true"></span> What we move</p>
+      <p class="eyebrow center">What we move</p>
       <h2 class="section-title center">Full-service moving &amp; packing</h2>
       <div class="service-grid">
         <article class="service-card">
-          <div class="service-icon"><i class="ti ti-home-2" aria-hidden="true"></i></div>
+          <img src="/img/residential.svg" alt="" class="service-img" width="64" height="64">
           <h3>Residential moving</h3>
           <p>Apartments, condos, townhomes, single-family homes, and storages. Packing, protection for valuables, moving, and unloading — we offer all of it.</p>
         </article>
         <article class="service-card service-card--feature">
           <div class="ribbon">Our specialty</div>
-          <div class="service-icon"><i class="ti ti-music" aria-hidden="true"></i></div>
+          <img src="/img/piano.svg" alt="" class="service-img" width="64" height="64">
           <h3>Piano moving</h3>
           <p>Pianos are our specialty — 30 years of it. Baby grand, upright, organ, or any item that needs extra care. It's our promise we'll go above and beyond.</p>
         </article>
         <article class="service-card">
-          <div class="service-icon"><i class="ti ti-building-warehouse" aria-hidden="true"></i></div>
+          <img src="/img/commercial.svg" alt="" class="service-img" width="64" height="64">
           <h3>Commercial moving</h3>
           <p>We have the manpower and the right equipment to safely and conveniently move all of your office equipment, furniture, boxes, and materials.</p>
         </article>
         <article class="service-card">
-          <div class="service-icon"><i class="ti ti-box-seam" aria-hidden="true"></i></div>
+          <img src="/img/packing.svg" alt="" class="service-img" width="64" height="64">
           <h3>Packing services</h3>
           <p>A complete packing service plus a full line of packing materials and cartons. Our professional packers pack your belongings safely and efficiently.</p>
         </article>
@@ -202,32 +205,41 @@
 
   <section class="section" id="difference">
     <div class="container">
-      <p class="eyebrow center"><span class="eyebrow-flag" aria-hidden="true"></span> Quality you can see</p>
+      <p class="eyebrow center">Quality you can see</p>
       <h2 class="section-title center">Your belongings, fully protected</h2>
       <div class="equip-grid">
-        <div class="equip-card"><div class="equip-icon"><i class="ti ti-layout-board" aria-hidden="true"></i></div><h3>Neoprene floor runners</h3><p>Every truck carries these runners to protect your carpet and wood floors from dirt and grime — quality floor protection is essential to a successful move.</p></div>
-        <div class="equip-card"><div class="equip-icon"><i class="ti ti-wrap" aria-hidden="true"></i></div><h3>Stretch wrap</h3><p>We use stretch wrap to protect and secure loose drawers and glass on just about any shape of furniture. It's especially great for antiques.</p></div>
-        <div class="equip-card"><div class="equip-icon"><i class="ti ti-shield" aria-hidden="true"></i></div><h3>Moving pads &amp; blankets</h3><p>Every piece of furniture gets padded. We also pad your stair railings, doors, and door jambs to prevent accidental damage to your home or office.</p></div>
+        <div class="equip-card"><img src="/img/runners.svg" alt="" class="equip-img" width="72" height="72"><h3>Neoprene floor runners</h3><p>Every truck carries these runners to protect your carpet and wood floors from dirt and grime — quality floor protection is essential to a successful move.</p></div>
+        <div class="equip-card"><img src="/img/wrap.svg" alt="" class="equip-img" width="72" height="72"><h3>Stretch wrap</h3><p>We use stretch wrap to protect and secure loose drawers and glass on just about any shape of furniture. It's especially great for antiques.</p></div>
+        <div class="equip-card"><img src="/img/pads.svg" alt="" class="equip-img" width="72" height="72"><h3>Moving pads &amp; blankets</h3><p>Every piece of furniture gets padded. We also pad your stair railings, doors, and door jambs to prevent accidental damage to your home or office.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section section--navy" id="testimonials">
+  <section class="section section--navy" id="reviews">
     <div class="container">
-      <p class="eyebrow center eyebrow--light"><span class="eyebrow-flag" aria-hidden="true"></span> Kind words from Katy families</p>
-      <h2 class="section-title center section-title--light">Our repeat customers say it best</h2>
-      <div class="testimonial-grid">
-        <blockquote class="testimonial"><div class="stars" aria-label="5 out of 5 stars"><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i></div><p>"This is the 2nd letter I feel compelled to write you and the 2nd time you've moved my wife and I. You and your team are batting 2 for 2. The entire crew was amazing."</p><footer>— Repeat customer, Katy TX</footer></blockquote>
-        <blockquote class="testimonial"><div class="stars" aria-label="5 out of 5 stars"><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i></div><p>"My husband retired from the Navy 4 years ago and we've been through more moves than I can count. Your guys were the best we've had."</p><footer>— Military family relocated to Katy</footer></blockquote>
-        <blockquote class="testimonial"><div class="stars" aria-label="5 out of 5 stars"><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i><i class="ti ti-star" aria-hidden="true"></i></div><p>"Your guys are work animals! I was very impressed with their attitude and the care they took. The movers went above and beyond."</p><footer>— Linda S.</footer></blockquote>
+      <div class="reviews-head">
+        <div>
+          <p class="eyebrow eyebrow--light">Reviews</p>
+          <h2 class="section-title section-title--light">Loved by Katy families</h2>
+        </div>
+        <div class="google-badge">
+          <div class="google-badge__score">
+            <span class="gscore">4.9</span>
+            <div class="gstars" aria-label="4.9 out of 5"><i class="ti ti-star-filled" aria-hidden="true"></i><i class="ti ti-star-filled" aria-hidden="true"></i><i class="ti ti-star-filled" aria-hidden="true"></i><i class="ti ti-star-filled" aria-hidden="true"></i><i class="ti ti-star-filled" aria-hidden="true"></i></div>
+            <span class="gcount" id="reviewCount">Based on 127 Google reviews</span>
+          </div>
+          <div class="google-logo"><i class="ti ti-brand-google" aria-hidden="true"></i> Google</div>
+        </div>
       </div>
+      <div class="review-grid" id="reviewGrid"></div>
+      <p class="reviews-note" id="reviewsNote"></p>
     </div>
   </section>
 
   <section class="section" id="rights">
     <div class="container rights-grid">
       <div class="rights-copy">
-        <p class="eyebrow"><span class="eyebrow-flag" aria-hidden="true"></span> Your rights when moving in Texas</p>
+        <p class="eyebrow">Your rights when moving in Texas</p>
         <h2 class="section-title">Only use a licensed mover</h2>
         <p>The TxDMV licenses moving companies and provides consumer protection so you can make a smart move. Texas law requires movers to give you a written estimate, a written contract before the move, and a brochure outlining your rights.</p>
         <ul class="rights-list">
@@ -256,7 +268,7 @@
         <h2>Moving soon? Don't leave it to voicemail.</h2>
         <p>Get a real quote in the next 60 seconds — any hour, any day.</p>
       </div>
-      <a href="#quote" class="btn btn-white btn-lg"><i class="ti ti-sparkles" aria-hidden="true"></i> Get my instant quote</a>
+      <a href="#quote" class="btn btn-white btn-lg"><i class="ti ti-bolt" aria-hidden="true"></i> Get my fast quote</a>
     </div>
   </section>
 
@@ -274,30 +286,55 @@
       <a href="#about">About us</a>
       <a href="#services">Services</a>
       <a href="#difference">Why choose us</a>
-      <a href="#testimonials">Testimonials</a>
+      <a href="#reviews">Reviews</a>
     </div>
     <div class="footer-col">
       <p class="footer-heading">Contact</p>
       <a href="tel:2813913536"><i class="ti ti-phone" aria-hidden="true"></i> 281-391-3536</a>
       <span><i class="ti ti-map-pin" aria-hidden="true"></i> Katy, TX · Greater Houston</span>
-      <a href="#quote"><i class="ti ti-sparkles" aria-hidden="true"></i> Free moving quote</a>
+      <a href="#quote"><i class="ti ti-bolt" aria-hidden="true"></i> Free moving quote</a>
     </div>
   </div>
   <div class="footer-bottom"><div class="container"><span>© 2026 Katy Movers, Inc. All rights reserved.</span><a href="#" id="howBuiltLink">How this demo was built</a></div></div>
 </footer>
 
+<button class="chat-fab" id="chatFab" aria-label="Open chat">
+  <i class="ti ti-message-2" aria-hidden="true"></i>
+  <span class="chat-fab__pulse" aria-hidden="true"></span>
+</button>
+
+<div class="chat-window" id="chatWindow" hidden aria-label="Chat with Katy Movers">
+  <div class="chat-header">
+    <div class="chat-header__brand">
+      <div class="chat-header__avatar"><i class="ti ti-truck-delivery" aria-hidden="true"></i></div>
+      <div>
+        <p class="chat-header__title">Katy Movers</p>
+        <p class="chat-header__status"><span class="status-dot" aria-hidden="true"></span> Typically replies in a minute</p>
+      </div>
+    </div>
+    <button class="chat-header__close" id="chatClose" aria-label="Close chat"><i class="ti ti-x" aria-hidden="true"></i></button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick"></div>
+  <form class="chat-input" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Type your question…" autocomplete="off" aria-label="Your message">
+    <button type="submit" aria-label="Send"><i class="ti ti-send" aria-hidden="true"></i></button>
+  </form>
+</div>
+
 <div class="info-modal" id="infoModal" hidden>
   <div class="info-modal__backdrop" id="infoModalBackdrop"></div>
   <div class="info-modal__card">
     <button class="info-modal__close" id="infoModalClose" aria-label="Close"><i class="ti ti-x" aria-hidden="true"></i></button>
-    <h3>What happened when you submitted that quote</h3>
+    <h3>How this demo works</h3>
     <ol>
-      <li><strong>Your form data</strong> was sent to a real backend API (<code>/api/quote</code>) — the same payload shape a production system gets from a live AI phone call.</li>
-      <li><strong>The server scored the lead</strong> using real logic: home size, distance, special items, and timing all factor into the estimate.</li>
-      <li><strong>A structured record was created</strong> — in production this becomes a contact card in the Precision Partners dashboard.</li>
-      <li><strong>In the live version</strong>, this same flow runs on every phone call: Twilio receives it, VAPI runs the conversation, N8N orchestrates follow-up, Supabase stores everything.</li>
+      <li><strong>The quote form</strong> sends to a real backend API (<code>/api/quote</code>) — the same payload shape a production system gets from a phone call.</li>
+      <li><strong>The server scores the lead</strong> using real logic: home size, distance, special items, and timing all factor into the estimate.</li>
+      <li><strong>Speed-to-lead:</strong> in production, every captured lead instantly fires a text to the customer and notifies the business owner to call — within seconds, not hours.</li>
+      <li><strong>Pay-to-confirm:</strong> once the owner confirms a quote, a secure payment link goes out so the customer can lock in their date on the spot.</li>
+      <li><strong>The chat assistant</strong> answers questions from the business's own details (service area, pricing, hours) and offers to connect to a live person when it makes sense.</li>
     </ol>
-    <p class="info-modal__note">This is a working demo of the real intake &amp; scoring logic — built to show Katy Movers what their site could do today.</p>
+    <p class="info-modal__note">This is a working demo of the real intake, scoring, and follow-up logic — built to show Katy Movers what their site could do today.</p>
   </div>
 </div>
 

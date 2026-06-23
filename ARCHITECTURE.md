@@ -131,3 +131,73 @@ This demo's standalone Node server (`server.js`) exists purely so this can
 be shown to Katy Movers as a real, clickable, working link **before** any
 of the above production wiring is built — it's a sales and proof-of-concept
 tool, not a parallel system that would need to be maintained long-term.
+
+---
+
+# Update — Speed-to-Lead, Pay-to-Confirm, Chat & Reviews
+
+This captures the additional features specified for the moving vertical, and
+exactly how each demo piece maps to production.
+
+## 1. Speed-to-lead (the core backend promise)
+
+The moment a quote is submitted (website form OR phone call), the flow is:
+
+```
+Lead captured
+   ↓
+Instantly (within seconds, not hours):
+   ├── Text the customer a confirmation + recap of their quote
+   └── Notify the business owner to CALL — push/SMS/dashboard alert
+   ↓
+Owner calls back while the customer is still deciding
+```
+
+In the demo, `server.js` already logs `[SMS STUB]` and `[OWNER ALERT STUB]`
+at exactly the points where these fire. In production:
+- Customer text → Twilio Programmable Messaging
+- Owner alert → Twilio SMS or push notification, triggered by N8N the instant
+  the lead row is written to Supabase
+- The whole point is SPEED: the business that calls back first wins the move.
+
+## 2. Pay-to-confirm (lock in the booking)
+
+```
+Owner reviews the lead, confirms/adjusts the quote
+   ↓
+One tap: "Send payment link"
+   ↓
+Customer gets a secure deposit/payment link (Stripe)
+   ↓
+Customer pays → date is locked → job is booked
+```
+
+In production this is a Stripe Checkout / Payment Link generated per quote,
+sent via the same Twilio SMS channel. The demo's result card is where the
+"confirmation text" reference already sets this up. Per the platform's
+safety rules, the customer always completes payment themselves through
+Stripe's own interface — the system never handles raw card details.
+
+## 3. Chat assistant
+
+The demo chat (`app.js` → chatbot section) answers from a hardcoded `BIZ`
+facts object: service area, pricing approach, hours, piano specialty,
+licensing, etc. It offers a live person ("call us / have someone call you")
+after a couple of exchanges or whenever the question needs a human.
+
+In production, swap the demo's `answerFor()` matcher for a real call:
+`POST /api/chat` with `{ message, history, businessFacts }`, where the
+backend calls the AI model with the business's own settings as context, so
+answers are accurate per-business and stay in scope (no quoting policy it
+shouldn't, etc.). The "talk to a live person" handoff stays exactly as-is.
+
+## 4. Google reviews
+
+The demo renders 6 placeholder reviews + a 4.9-star Google badge from a
+`REVIEWS` array in `app.js`. In production:
+- `GET /api/reviews` proxies the Google Places API (Place Details → reviews)
+  using the business's Place ID, cached server-side to respect rate limits.
+- Same render code, real live reviews.
+- Note: Google's API returns up to 5 reviews per call and has display-term
+  requirements (must show the Google logo, attribution) — already reflected
+  in the demo's card design.

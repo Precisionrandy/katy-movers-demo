@@ -7,7 +7,7 @@
  * In production this file's job would be done by:
  *   - N8N webhook (receives the same POST /api/quote payload)
  *   - A scoring workflow node (same logic as scoreQuote() below)
- *   - A Supabase insert (same shape as the `leads` arrhay below)
+ *   - A Supabase insert (same shape as the `leads` array below)
  *   - A Twilio SMS send (same place as the sendConfirmationSms() stub)
  *
  * See /docs/ARCHITECTURE.md for the full production wiring diagram.
@@ -19,7 +19,7 @@ const path = require("path");
 const crypto = require("crypto");
 
 const PORT = process.env.PORT || 8080;
-const PUBLIC_DIR = __dirname;
+const PUBLIC_DIR = path.join(__dirname, "public");
 
 // ── Startup diagnostics ──────────────────────────────────────────
 // These logs appear in Render's "Logs" tab and make it obvious whether
